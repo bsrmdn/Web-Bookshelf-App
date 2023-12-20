@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2 class="shelf">Tambah Buku Baru</h2>
+        <form id="book-form">
+            <div class="shelf">
+                <label for="title">Judul:</label>
+                <input type="text" id="title" required>
+            </div>
+            <div class="shelf">
+                <label for="author">Penulis:</label>
+                <input type="text" id="author" required>
+            </div>
+            <div class="shelf">
+                <label for="year">Tahun Terbit:</label>
+                <input type="number" id="year" required>
+            </div>
+            <div class="shelf">
+                <label for="isComplete">Selesai Dibaca:</label>
+                <input type="checkbox" id="isComplete">
+            </div>
+            <div class="shelf">
+                <button type="submit" id="addBook">Tambah Buku</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-container">
+        <h2 class="shelf">Cari Buku</h2>
+        <form class="shelf" id="search-form">
+            <label for="searchInput">Cari Buku:</label>
+            <input type="text" id="searchInput" placeholder="Masukkan kata kunci pencarian">
+            <button type="submit" id="searchBook">Cari</button>
+        </form>
+    </div>
+
+    <div id="container">
+        <div class="bookshelf" id="unfinished-shelf">
+            <h2 class="shelf">Belum Selesai Dibaca</h2>
+            <div id="unfinished-list">
+            </div>
+        </div>
+        <div class="bookshelf" id="finished-shelf">
+            <h2 class="shelf">Selesai Dibaca</h2>
+            <div id="finished-list"></div>
+        </div>
+    </div>
+    <h2 id="no-book">Tidak ada buku yang tersedia</h2>
+
+    <div id="edit-modal">
+        <div id="modal-content">
+            <h2 class="shelf">Edit Buku</h2>
+            <form id="edit-form">
+                <div class="shelf">
+                    <label for="editTitle">Judul:</label>
+                    <input type="text" id="editTitle" required>
+                </div>
+                <div class="shelf">
+                    <label for="editAuthor">Penulis:</label>
+                    <input type="text" id="editAuthor" required>
+                </div>
+                <div class="shelf">
+                    <label for="editYear">Tahun Terbit:</label>
+                    <input type="number" id="editYear" required>
+                </div>
+                <div class="shelf">
+                    <button type="submit" id="editBook">Confirm</button>
+                    <button type="button" id="closeModal">Batal</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
